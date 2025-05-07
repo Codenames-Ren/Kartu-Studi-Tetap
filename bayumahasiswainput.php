@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     body {
       font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
       background-color: rgb(138, 206, 255);
-      padding: 50px 0;
+      /* padding: 50px 0; */
       margin: 0;
       min-height: 100vh;
     }
@@ -40,9 +40,12 @@ if (isset($_POST['submit'])) {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 500px;
+      width: 40%;
       padding: 30px;
-      margin: 0 auto;
+      margin: auto;
+      margin-top: 30px ;
+      margin-left: 580px;
+      /* display: flex; */
     }
 
     h2 {
@@ -55,7 +58,7 @@ if (isset($_POST['submit'])) {
     }
 
     .form-group {
-      margin-bottom: 15px;
+      /* margin-bottom: 15px; */
       background-color: transparent;
     }
 
@@ -92,7 +95,7 @@ if (isset($_POST['submit'])) {
     }
 
     .btn-submit {
-      background-color: rgb(66, 139, 202);
+      background-color:  #4CAF50;
       color: white;
       border: none;
       padding: 12px 16px;
@@ -105,7 +108,7 @@ if (isset($_POST['submit'])) {
     }
 
     .btn-submit:hover {
-      background-color: rgb(51, 122, 183);
+      background-color: rgb(33, 207, 39);
     }
   </style>
 </head>

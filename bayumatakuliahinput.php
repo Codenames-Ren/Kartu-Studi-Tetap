@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
     }
 
     .btn-submit {
-      background-color: rgb(66, 139, 202);
+      background-color: #4CAF50;
       color: white;
       border: none;
       padding: 12px 16px;
@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
     }
 
     .btn-submit:hover {
-      background-color: rgb(51, 122, 183);
+      background-color: rgb(33, 207, 39);
     }
   </style>
 </head>
