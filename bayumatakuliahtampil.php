@@ -30,11 +30,38 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        th a {
+          text-decoration: none;
+          color: white;
+        }
+
+        th a:hover {
+          color: cyan;
+          transition: 0.3s ease;
+        }
         
         td {
             padding: 12px;
             text-align: center;
             border-bottom: 1px solid #eee;
+        }
+
+        td a {
+          text-decoration: none;
+          color: white;
+          /* border: 1px solid black; */
+          background-color: #45a049;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          border-radius: 10%;
+          padding: 5px
+        }
+
+        td a:hover {
+          background-color:rgb(31, 193, 39);
+          transform: translateX(-2px -2px);
+          transition: 0.3s ease;
         }
         
         /* Zebra stripe effect */
@@ -96,7 +123,7 @@
               <th width="10%">KODE</th>
               <th width="50%">MATA KULIAH</th>
               <th width="20%">SKS</th>
-              <th width="15%">TINDAKAN</th>
+              <th width="15%"><a href="bayumatakuliahtambah.php">TINDAKAN</a></th>
             </tr>
           </thead>
           <tbody align="center">
@@ -116,7 +143,7 @@
             <?php } ?>
           </tbody>
         </table>
-      <div style="width: 100%; text-align: right; margin-top: 20px;">
+      <!-- <div style="width: 100%; text-align: right; margin-top: 20px;">
           <a href="bayumatakuliahinput.php" style="display: inline-block; padding: 8px 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">+ Input Data</a>
-      </div>
+      </div> -->
       </article>
