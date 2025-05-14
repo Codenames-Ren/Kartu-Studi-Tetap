@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
   $check_result = mysqli_query($koneksi, $check_query);
 
   if (mysqli_num_rows($check_result) >0) {
-    echo "<script>alert('KODE $kode sudah ada dalam database!');
+    echo "<script>alert('Kode $kode sudah terdaftar!');
     window.location='bayumatakuliah.php';</script>";
     exit();
   }
