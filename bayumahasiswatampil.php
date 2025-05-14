@@ -51,7 +51,7 @@
           text-decoration: none;
           color: white;
           /* border: 1px solid black; */
-          background-color: #45a049;
+          background-color:rgb(236, 30, 30);
           transform: translateY(-2px);
           box-shadow: 0 4px 8px rgba(0,0,0,0.2);
           border-radius: 10%;
@@ -59,7 +59,7 @@
         }
 
         td a:hover {
-          background-color:rgb(31, 193, 39);
+          background-color:rgb(201, 11, 11);
           transform: translateX(-2px -2px);
           transition: 0.3s ease;
         }

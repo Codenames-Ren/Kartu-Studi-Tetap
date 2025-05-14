@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'head.php';?>
+  </head>
   <body>
     <header>
       <h2>Data Dosen</h2>
@@ -11,6 +12,6 @@
     include 'bayudoseninput.php';
     ?>
     </section>
-   <?php include 'footer.php';?>
+    <?php include 'footer.php';?>
   </body>
 </html>

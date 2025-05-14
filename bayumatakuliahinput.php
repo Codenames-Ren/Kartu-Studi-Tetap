@@ -6,6 +6,15 @@ if (isset($_POST['submit'])) {
   $nama = $_POST['nama'];
   $sks = $_POST['sks'];
 
+  $check_query = "SELECT bayuMatKode FROM bayumatkul WHERE bayuMatKode = '$kode'";
+  $check_result = mysqli_query($koneksi, $check_query);
+
+  if (mysqli_num_rows($check_result) >0) {
+    echo "<script>alert('KODE $kode sudah ada dalam database!');
+    window.location='bayumatakuliah.php';</script>";
+    exit();
+  }
+
   $query = "INSERT INTO bayumatkul (bayuMatKode, bayuMatNama, bayuMatSks) 
             VALUES ('$kode', '$nama', '$sks')";
 
@@ -21,51 +30,53 @@ if (isset($_POST['submit'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Input Data Mahasiswa</title>
+  <title>Form Input Data Matakuliah</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
     body {
-      font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
       background-color: rgb(138, 206, 255);
-      padding: 50px 0;
-      margin: 0;
-      min-height: 100vh;
     }
 
-    .container {
+    .matkul-container {
+      font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      margin-right: 80px; 
+    }
+
+    .matkul-form {
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       width: 500px;
+      height: 450px;
       padding: 30px;
-      margin: 100px auto ;
     }
 
-    h2 {
+    .matkul-form h2 {
       text-align: center;
       color: #333;
       margin-top: 0;
       margin-bottom: 25px;
       font-size: 24px;
-      background-color: transparent;
     }
 
-    .form-group {
-      margin-bottom: 15px;
-      background-color: transparent;
+    .matkul-form .form-group {
+      margin-bottom: 20px;
     }
 
-    .form-group label {
+    .matkul-form .form-group label {
       font-weight: 600;
       display: block;
       margin-bottom: 5px;
       color: #444;
       font-size: 14px;
-      background-color: transparent;
     }
 
-    .form-group input, .form-group textarea {
+    .matkul-form .form-group input, 
+    .matkul-form .form-group textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid #ddd;
@@ -76,19 +87,20 @@ if (isset($_POST['submit'])) {
       transition: border-color 0.3s, box-shadow 0.3s;
     }
 
-    .form-group input:focus, .form-group textarea:focus {
+    .matkul-form .form-group input:focus, 
+    .matkul-form .form-group textarea:focus {
       border-color: rgb(85, 170, 238);
       outline: none;
       box-shadow: 0 0 0 2px rgba(85, 170, 238, 0.2);
       background-color: white;
     }
 
-    .form-group textarea {
+    .matkul-form .form-group textarea {
       height: 100px;
       resize: vertical;
     }
 
-    .btn-submit {
+    .matkul-form .btn-submit {
       background-color: #4CAF50;
       color: white;
       border: none;
@@ -98,32 +110,35 @@ if (isset($_POST['submit'])) {
       width: 100%;
       font-size: 15px;
       font-weight: 600;
+      margin-top: 35px;
       transition: background-color 0.3s;
     }
 
-    .btn-submit:hover {
+    .matkul-form .btn-submit:hover {
       background-color: rgb(33, 207, 39);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Form Input Data Mata Kuliah</h2>
-    <form method="POST" action="">
-      <div class="form-group">
-        <label for="kode">KODE MK :</label>
-        <input type="text" id="kode" name="kode" required>
-      </div>
-      <div class="form-group">
-        <label for="nama">Mata Kuliah :</label>
-        <input type="text" id="nama" name="nama" required>
-      </div>
-      <div class="form-group">
-        <label for="prodi">SKS :</label>
-        <input type="text" id="sks" name="sks" required>
-      </div>
-      <input class="btn-submit" type="submit" name="submit" value="Simpan">
-    </form>
+  <div class="matkul-container">
+    <div class="matkul-form">
+      <h2>Form Input Data Mata Kuliah</h2>
+      <form method="POST" action="">
+        <div class="form-group">
+          <label for="kode">KODE MK :</label>
+          <input type="text" id="kode" name="kode" required>
+        </div>
+        <div class="form-group">
+          <label for="nama">Mata Kuliah :</label>
+          <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+          <label for="sks">SKS :</label>
+          <input type="text" id="sks" name="sks" required>
+        </div>
+        <input class="btn-submit" type="submit" name="submit" value="Simpan">
+      </form>
+    </div>
   </div>
 </body>
 </html>
