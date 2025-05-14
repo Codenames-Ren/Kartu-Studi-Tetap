@@ -2,6 +2,7 @@
 <html lang="en">
 <?php include 'head.php';?>
   <body>
+    <div class="wrapper">
     <header>
       <h2>Data Dosen</h2>
     </header>
@@ -11,6 +12,7 @@
     include 'bayudosentampil.php';
     ?>
     </section>
+    </div>
    <?php include 'footer.php';?>
   </body>
 </html>

@@ -10,8 +10,16 @@
             margin: 0;
         }
 
+        html, body {
+            height: 100%;
+        }
+        
         body {
             font-family: "Poppins", sans-serif;
+        }
+
+        .wrapper {
+            min-height: calc(100vh - 80px);
         }
 
         header {
