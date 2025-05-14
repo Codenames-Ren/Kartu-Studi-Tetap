@@ -3,6 +3,7 @@
 <?php include 'head.php';?>
   </head>
   <body>
+  <div class="wrapper">
     <header>
       <h2>Data Mahasiswa</h2>
     </header>
@@ -12,6 +13,7 @@
     include 'bayumahasiswatampil.php';
     ?>
     </section>
+  </div>
     <?php include 'footer.php';?>
   </body>
 </html>
