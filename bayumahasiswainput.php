@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
   $check_result = mysqli_query($koneksi, $check_query);
 
   if (mysqli_num_rows($check_result) >0) {
-    echo "<script>alert('NIM $nim sudah ada dalam database!');
+    echo "<script>alert('NIM $nim sudah terdaftar!');
     window.location='bayumahasiswa.php';</script>";
     exit();
   }
