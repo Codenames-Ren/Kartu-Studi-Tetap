@@ -33,11 +33,11 @@
         nav {
             float: left;
             width: 25%;
-            height: 500px;
+            height: 550px;
             background: white;
             padding: 40px;
             border-radius: 30px;
-            margin-top: 20px;
+            margin-top: 80px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #e6e6e6;
         }
@@ -48,7 +48,7 @@
         }
         
         nav ul li {
-            margin-bottom: 15px;
+            margin-top: 40px;
             padding: 10px;
             border-radius: 20px;
             transition: background-color 0.3s ease;
@@ -79,6 +79,7 @@
             background: white;
             height: auto;
             min-height: 500px;
+            margin-top: 80px;
             overflow: auto;
         }
 
