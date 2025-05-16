@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
   $check_result = mysqli_query($koneksi, $check_query);
 
   if (mysqli_num_rows($check_result) > 0) {
-    echo "<script>alert('Kode $kode sudah terdaftar!'); window.location='matakuliahtampil.php';</script>";
+    echo "<script>alert('Kode $kode sudah terdaftar!'); window.location='bayumatakuliah.php';</script>";
     exit();
   }
 
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
             VALUES ('$kode', '$nama', '$sks')";
 
   if (mysqli_query($koneksi, $query)) {
-    echo "<script>alert('Data berhasil ditambahkan!'); window.location='matakuliahtampil.php';</script>";
+    echo "<script>alert('Data berhasil ditambahkan!'); window.location='bayumatakuliah.php';</script>";
   } else {
     echo "Gagal menambahkan data: " . mysqli_error($koneksi);
   }
@@ -37,23 +37,25 @@ if (isset($_POST['submit'])) {
     background-color: rgb(74, 177, 246);
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 500px;
+    width: 800px;
+    height: 700px;
     padding: 50px;
   }
 
   .matkul-form h2 {
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 22px;
+    margin-bottom: 35px;
+    font-size: 32px;
     color: white;
   }
 
   .matkul-form .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   .matkul-form .form-group label {
     font-weight: 600;
+    font-size: 20px;
     margin-bottom: 10px;
     display: block;
     color: white;
@@ -61,7 +63,8 @@ if (isset($_POST['submit'])) {
 
   .matkul-form .form-group input {
     width: 100%;
-    padding: 10px;
+    font-size: 20px;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
@@ -70,13 +73,14 @@ if (isset($_POST['submit'])) {
   .btn-submit {
     background-color: #4CAF50;
     color: white;
+    font-size: 20px;
     border: none;
-    padding: 12px;
+    padding: 25px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .btn-submit:hover {
