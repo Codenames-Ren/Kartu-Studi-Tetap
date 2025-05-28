@@ -1,4 +1,29 @@
+<?php
+include 'bayukoneksi.php';
 
+if (isset($_POST['submit'])) {
+  $nid = $_POST['nid'];
+  $nama = $_POST['nama'];
+  $pendidikan = $_POST['pendidikan'];
+
+  $check_query = "SELECT bayuDosNid FROM bayudosen WHERE bayuDosNid = '$nid'";
+  $check_result = mysqli_query($koneksi, $check_query);
+
+  if (mysqli_num_rows($check_result) > 0) {
+    $update_query = "UPDATE bayudosen 
+                     SET bayuDosNama = '$nama', bayuDosPendidikan = '$pendidikan' 
+                     WHERE bayuDosNid = '$nid'";
+
+    if (mysqli_query($koneksi, $update_query)) {
+      echo "<script>alert('Data berhasil diubah!'); window.location='bayudosen.php';</script>";
+    } else {
+      echo "Gagal mengubah data: " . mysqli_error($koneksi);
+    }
+  } else {
+    echo "<script>alert('NID $nid tidak ditemukan!'); window.location='bayudosen.php';</script>";
+  }
+}
+?>
 
 
 <style>
