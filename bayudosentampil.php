@@ -137,7 +137,10 @@
               <td><?php echo $bayud['bayuDosNid']; ?></td>
               <td><?php echo $bayud['bayuDosNama']; ?></td>
               <td><?php echo $bayud['bayuDosPendidikan']; ?></td>
-              <td><a href="bayudosenhapus.php?id=<?php echo $bayud['bayuDosNid']; ?>">HAPUS</a></td>
+              <td>
+                <a href="bayudosenedit.php?id=<?php echo $bayud['bayuDosNid']; ?>" style="background: green">EDIT</a>
+                <a href="bayudosenhapus.php?id=<?php echo $bayud['bayuDosNid']; ?>">HAPUS</a>
+              </td>
             </tr>
             <?php } ?>
           </tbody>
