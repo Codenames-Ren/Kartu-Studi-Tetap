@@ -19,8 +19,8 @@ Aplikasi sederhana ini dibuat menggunakan **PHP Native** dan menampilkan fitur d
 
 ## Teknologi yang Digunakan
 
-- **Frontend**: HTML, CSS (optional styling)
-- **Backend**: PHP (native, tanpa framework)
+- **Frontend**: HTML, CSS
+- **Backend**: PHP
 - **Database**: MySQL
 
 ---
