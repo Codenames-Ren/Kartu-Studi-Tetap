@@ -1,6 +1,6 @@
 # Kartu Studi Tetap (KST)
 
-**Repository UTS & UAS - Mata Kuliah Pemrograman Web **
+**Repository UTS & UAS - Mata Kuliah Pemrograman Web**
 
 Repo ini berisi source code dari tugas Ujian Tengah Semester (UTS) dan Ujian Akhir Semester (UAS) untuk matakuliah **Pemrograman Web 1**.  
 Aplikasi sederhana ini dibuat menggunakan **PHP Native** dan menampilkan fitur dasar **CRUD** untuk pengelolaan data Kartu Studi Tetap (KST).
